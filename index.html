@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Home Page</title>
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div id="library_logo_container"><img src="images/book-open-reader-solid-full.svg" id="library_logo"></div>
+        <nav class="all_links_container">
+            <ul id="sidebar_btn_container_1" class="sidebar_btn_container">
+            <a href="">
+                <li class="sidebar_btn"><img src="images/house-solid-full.svg" alt="" class="sidebar_icon">Home</li>
+            </a>
+            <a href="">
+                <li class="sidebar_btn"><img src="images/bars-solid-full.svg" alt="" class="sidebar_icon">Categories</li>
+            </a>
+            <a href="">
+                <li class="sidebar_btn"><img src="images/bookmark-solid-full.svg" alt="" class="sidebar_icon">Saved</li>
+            </a>
+        </ul>
+        <ul id="sidebar_btn_container_2" class="sidebar_btn_container">
+            <a href="">
+                <li class="sidebar_btn"><img src="images/gear-solid-full.svg" alt="" class="sidebar_icon">Settings</li>
+            </a>
+            <a href="">
+                <li class="sidebar_btn"><img src="images/right-to-bracket-solid-full.svg" alt="" class="sidebar_icon">Logout</li>
+            </a>
+        </ul>
+        </nav>
+    </aside>
+    <header class="header" id="header">
+        <search class="search_bar" id="search_bar"><img src="images/magnifying-glass-solid-full.svg" id="search_icon"></search>
+        <button class="header_btn" id="notif_btn">
+            <img src="images/bell-solid-full.svg" alt="notification icon" class="header_icon" id="notif_icon">
+        </button>
+        <button class="header_btn" id="light_btn">
+            <img src="images/sun-regular-full.svg" alt="light mode icon" class="header_icon" id="light_icon">
+        </button>
+    </header>
+    <main class="main" id="main">
+        <div id="shelf_container">
+            <div id="trending_container" class="cards_container">
+                <div id="card_1" class="cards">
+                    <button class="show_info">
+                        <img src="covers/15107765-L.jpg" class="cover_page">
+                    </button>
+                    <p class="book_title">Pretty Vincible</p>
+                </div>
+            </div>
+            <div id="fiction_container" class="cards_container">
+                <div id="card_1" class="cards">
+                    <img src="covers/15107765-L.jpg" class="cover_page">
+                    <p class="book_title">Pretty Vincible</p>
+                </div>
+            </div>
+            <div id="classic_container" class="cards_container">
+                <div id="card_1" class="cards">
+                    <img src="covers/15107765-L.jpg" class="cover_page">
+                    <p class="book_title">Pretty Vincible</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="" id="input_container">
+        <header class="form_header" id="form_header">
+            <h2 id="header_text">Create a New Book</h2>
+        </header>
+        <form id="book_creator">
+            <div id="field_container">
+                <div id="" class="fields">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div id="" class="fields">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div id="" class="fields">
+                    <label for="publisher">Publisher</label>
+                    <input type="text" id="publisher" name="publisher" required>
+                </div>
+                <div id="" class="fields">
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" name="pages" required>
+                </div>
+                <div id="" class="fields">
+                    <label for="read_status">Read</label>
+
+                    <label for="read_status">Yes</label>
+                    <input type="radio" id="read_status_yes" name="read_status" class="radio_btn" required>
+
+                    <label for="read_status">No</label>
+                    <input type="radio" id="read_status_no" name="read_status" class="radio_btn" required>
+                </div>
+                <div id="" class="fields">
+                    <label for="cover">Image</label>
+                    <input type="file" id="cover" name="cover" accept="image/png, image/jpeg">
+                </div>
+            </div>
+        </form>
+        <div id="cta_btn_container">
+            <button type="submit" id="submit_btn">Submit</button>
+        </div>
+    </div>
+    <div id="overlay" class=""></div>
+</body>
+</html>
