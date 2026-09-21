@@ -64,7 +64,7 @@ a{
 #search_bar{
     display: flex;
     width: max(250px, 30%);
-    height: max(30px, 40%);
+    height: max(30px, 30%);
     border-radius: 20px;
     background-color: lightgray;
     justify-content: end;
@@ -76,7 +76,6 @@ a{
 #search_icon{
     margin: 5px;
     width: 7%
-    m: 5px;
 }
 
 .header_btn{
