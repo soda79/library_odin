@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 const myLibrary = [];
 
 function BookConstructor(title, author, publisher, pages, read_status, id, book_cover){
@@ -22,7 +24,6 @@ function addBookToLib(){
     let pages = document.getElementById("pages").value;
     let id = crypto.randomUUID();
     let rdStat1 = document.getElementById("read_status_yes");
-    let rdStat2 = document.getElementById("read_status_no");
     let book_cover = document.getElementById("cover");
 
     if (rdStat1.checked == true){
@@ -35,4 +36,14 @@ function addBookToLib(){
     }
 
     console.log(myLibrary[0]);
+}
+
+
+function createBookElement(){
+    const myBooks = document.getElementById("my_books_container");
+    const book = document.createElement("button")
+    
+    book.classList.add("show_info");
+    
+    myBooks.appendChild(book);
 }

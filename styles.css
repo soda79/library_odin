@@ -3,7 +3,7 @@
     padding: 0;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
-    /*border: 1px solid black; */
+    border: 1px solid black; 
 }
 
 :root{
@@ -74,8 +74,8 @@ a{
 
 
 #search_icon{
-    margin: 5px;
-    width: 7%
+    margin: 10px;
+    width: 5%
 }
 
 .header_btn{
