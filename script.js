@@ -1,6 +1,5 @@
-const { createElement } = require("react");
-
 const myLibrary = [];
+const currentLibrary = []
 
 function BookConstructor(title, author, publisher, pages, read_status, id, book_cover){
     this.title = title;
@@ -41,7 +40,7 @@ function addBookToLib(){
 
 function createBookElement(){
     const myBooks = document.getElementById("my_books_container");
-    const book = document.createElement("button")
+    const book = document.createElement("button");
     
     book.classList.add("show_info");
     
