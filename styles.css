@@ -3,7 +3,8 @@
     padding: 0;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
-    border: 1px solid black; 
+
+
 }
 
 :root{
@@ -52,7 +53,7 @@ a{
 #header{
     display: flex;
     grid-area: header;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -84,14 +85,13 @@ a{
     width: 28px;
 }
 
-#notif_btn{
-    margin-left: auto;
-    margin-right: 8%;
+#header_btn_container{
+    display: flex;
+    margin-right: 3rem;
+    justify-content: space-between;
+    width: 12%
 }
 
-#light_btn{
-    margin-right: 6%;
-}
 
 
 #library_logo_container{
@@ -162,8 +162,6 @@ a{
     flex-grow: 1;
 }
 
-
-
 .cover_page{
     height: 225px;
     width: 150px;
@@ -189,6 +187,44 @@ a{
     transform: translate(-50%, -50%) scale(1);
 }
 
+.info_tab_container{
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    scale: 1;
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.info_tab_container.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.info_tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.info_tab_fields{
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+}
+
+
 #overlay{
     position: fixed;
     opacity: 0;
@@ -196,7 +232,7 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     pointer-events: none;
 }
 
@@ -206,11 +242,24 @@ a{
 }
 
 #form_header{
+    display: flex;
+    flex-direction: column;
     height: 10%;
 }
 
+#close_form_btn{
+    display: flex;
+    justify-content: end;
+    border: 1px solid red;
+}
+
+#close_form_icon{
+    width: 30px;
+}
+
 #header_text{
-    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #book_creator{
@@ -223,8 +272,8 @@ a{
 #field_container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
-    gap: 1rem;
     padding: 2rem;
 }
 

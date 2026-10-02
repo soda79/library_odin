@@ -37,19 +37,33 @@
     </aside>
     <header class="header" id="header">
         <search class="search_bar" id="search_bar"><img src="images/magnifying-glass-solid-full.svg" id="search_icon"></search>
-        <button class="header_btn" id="notif_btn">
+        <div id="header_btn_container">
+        <button class="header_btn" id="create_book_btn">
+            <img src="images/plus-solid-full.svg" alt="create book icon" class="header_icon" id="create_book_icon">
+        </button>
+            <button class="header_btn" id="notif_btn">
             <img src="images/bell-solid-full.svg" alt="notification icon" class="header_icon" id="notif_icon">
         </button>
         <button class="header_btn" id="light_btn">
             <img src="images/sun-regular-full.svg" alt="light mode icon" class="header_icon" id="light_icon">
         </button>
+        </div>
     </header>
     <main class="main" id="main">
         <div id="shelf_container">
             <div id="my_books_container" class="cards_container">
                 <h3 class="shelf_heading">My Books</h3> 
                 <button class="show_info">
-                    <img src="covers/15107765-L.jpg" class="cover_page">
+                    <img src="covers/15107765-L.jpg" class="cover_page" id="show_info_cover">
+                    <div class="info_tab_container" id="info_tab_container">
+                        <ul class="info_tab">
+                            <li class="info_tab_fields" id="titleOne">Title</li>
+                            <li class="info_tab_fields">Author</li>
+                            <li class="info_tab_fields">Publisher</li>
+                            <li class="info_tab_fields">Pages</li>
+                            <li class="info_tab_fields">Read</li>
+                        </ul>
+                     </div>
                 </button>
                 <p class="book_title">Pretty Vincible</p>
             </div>
@@ -69,8 +83,11 @@
             </div>
         </div>
     </main>
-    <div class="" id="input_container">
+    <div class="active" id="input_container">
         <header class="form_header" id="form_header">
+            <button id="close_form_btn">
+                <img src="images/square-xmark-solid-full.svg" id="close_form_icon">
+            </button>
             <h2 id="header_text">Create a New Book</h2>
         </header>
         <form id="book_creator">
@@ -102,7 +119,7 @@
                 </div>
                 <div id="" class="fields">
                     <label for="cover">Image</label>
-                    <input type="file" id="cover" class="cover_page" name="cover" accept="image/png, image/jpeg">
+                    <input type="file" id="cover" class="cover_book" name="cover" accept="image/png, image/jpeg">
                 </div>
             </div>
         </form>
@@ -111,5 +128,6 @@
         </div>
     </div>
     <div id="overlay" class=""></div>
+
 </body>
 </html>
