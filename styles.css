@@ -3,8 +3,6 @@
     padding: 0;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
-
-
 }
 
 :root{
@@ -170,6 +168,7 @@ a{
 #input_container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     opacity: 1;
     scale: 1;
     position: absolute;
@@ -209,7 +208,7 @@ a{
 
 .info_tab{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     flex-grow: 1;
@@ -244,13 +243,15 @@ a{
 #form_header{
     display: flex;
     flex-direction: column;
-    height: 10%;
+    justify-content: space-between;
+    height: 12%;
 }
 
 #close_form_btn{
     display: flex;
     justify-content: end;
-    border: 1px solid red;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 #close_form_icon{
@@ -264,9 +265,8 @@ a{
 
 #book_creator{
     display: flex;
-    justify-content: space-between;
-    justify-content: start;
-    height: 80%;
+    flex-direction: column;
+    height: 88%;
 }
 
 #field_container{

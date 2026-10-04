@@ -1,11 +1,12 @@
 const myLibrary = [];
 const currentLibrary = [];
-const submit = document.getElementById("submit_btn");
+const submit = document.getElementById("book_creator");
 const infoBtn = document.getElementById("show_info_cover");
 const overlay = document.getElementById("overlay");
 const infoTab = document.getElementById("info_tab_container");
 const createBookBtn = document.getElementById("create_book_btn");
 const formTab = document.getElementById("input_container");
+const formCloseBtn = document.getElementById("close_form_btn");
 
 function BookConstructor(title, author, publisher, pages, read_status, id, book_cover){
     this.title = title;
@@ -17,18 +18,13 @@ function BookConstructor(title, author, publisher, pages, read_status, id, book_
     this.book_cover = book_cover;
 }
 
-
-submit.addEventListener('click', addBookToLib);
+submit.addEventListener('submit', (event) => addBookToLib(event));
 createBookBtn.addEventListener('click', toggleForm);
-overlay.addEventListener('click', removeForm);
-
-let i = 0;
+formCloseBtn.addEventListener('click', removeForm);
 
 function toggleForm(){
-    i++
     formTab.classList.add("active");
     overlay.classList.add("active");
-    console.log("code ran" + i);
 }
 
 function removeForm(){
@@ -36,7 +32,9 @@ function removeForm(){
         overlay.classList.remove("active");
 }
 
-function addBookToLib(){
+function addBookToLib(event){
+    event.preventDefault();
+
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let publisher = document.getElementById("publisher").value;
@@ -55,11 +53,10 @@ function addBookToLib(){
         myLibrary.push(new BookConstructor(title, author, publisher, pages, read_status, id, book_cover));
     }
 
-    console.log(myLibrary[0]);
-
     createBookElement();
-}
 
+    submit.reset();
+}
 
 function createBookElement(){
     const myBooks = document.getElementById("my_books_container");
@@ -140,7 +137,6 @@ function defaultSlide(){
             item.classList.add("info_tab_fields");
             infoTab.appendChild(item);
         }
-
 
         if(item.id == item.dataset.identity){
             titleDisplay.innerText = item.title;
